@@ -1,8 +1,19 @@
 import { useState } from "react";
 import ButtonCheck from "../../components/ui/ButtonCheck";
 
-const handleCheckButton = (check): boolean => {
-	
+interface Role {
+	id: number,
+	role: string
+}
+
+interface AllRoles {
+	role: Role[]
+}
+
+const Roles: AllRoles = 
+
+const handleCheckButton = (check: boolean): boolean => {
+	return check;
 }
 
 function Login ()
@@ -19,14 +30,13 @@ function Login ()
 				<p className="text-ink-400 text-sm">Choisissez votre rôle et connectez-vous.</p>
 			</div>
 
-			<div className="grid grid-cols-2 gap-2 mb-7">
-				<ButtonCheck label="Administrateur" checked={false}/>
-				<ButtonCheck label="Surveillant" checked={false}/>
-				<ButtonCheck label="Professeur" checked={false}/>
-				<ButtonCheck label="Étudiant" checked={false}/>
-			</div>
-
 			<form className="space-y-4">
+				<div className="grid grid-cols-2 gap-2 mb-7">
+					<ButtonCheck label="Administrateur" checked={false}/>
+					<ButtonCheck label="Surveillant" checked={false}/>
+					<ButtonCheck label="Professeur" checked={false}/>
+					<ButtonCheck label="Étudiant" checked={false}/>
+				</div>
 				<div>
 					<label className="block text-ink-300 text-xs font-medium mb-1.5">Adresse email</label>
 					<div className="relative">
@@ -60,7 +70,7 @@ function Login ()
 				</button>
 			</form>
 
-			<p className="text-center text-ink-600 text-xs mt-10">© 2025 EduGest · Tous droits réservés</p>
+			<p className="text-center text-ink-600 text-xs mt-10">© 2026 EduGest · Tous droits réservés</p>
 			</div>
 		</div>
 	</div>
